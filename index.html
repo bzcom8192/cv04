@@ -9,30 +9,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Bus CV V4.0.0</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-        .font-bebas {
-            font-family: 'Bebas Neue', cursive;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
 
         .font-inter {
             font-family: 'Inter', sans-serif;
         }
 
-        .font-prompt {
-            font-family: 'Prompt', sans-serif;
-        }
-
-        .font-manrope {
-            font-family: 'Manrope', sans-serif;
-        }
-
         .font-poppins {
             font-family: 'Poppins', sans-serif;
+        }
+
+        .font-sansita {
+            font-family: 'Sansita Swashed', cursive;
         }
 
         .font-light {
@@ -63,8 +53,41 @@
             align-items: center;
         }
 
+        .color-primary {
+            color: #E9BD8C;
+        }
+
+        .color-secondary {
+            color: #933C24;
+        }
+
+        .bg-primary {
+            background-color: #933C24;
+        }
+
+        .color-white {
+            color: white;
+        }
+
+
         .text-center {
             text-align: center;
+        }
+
+        .gap-1 {
+            gap: 0.25rem;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
         }
 
 
@@ -74,7 +97,7 @@
         }
 
         a {
-            color: #C7C7C7;
+            color: white;
             text-decoration: none;
         }
 
@@ -85,6 +108,9 @@
         .head {
             min-height: 100vh;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
         }
 
         .head>.head-bg {
@@ -118,6 +144,169 @@
         .active {
             color: #E9BD8C;
         }
+
+        .head-content {
+            height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            padding: 0 4rem;
+            color: white;
+        }
+
+        .title1 {
+            font-size: 1rem;
+        }
+
+        .title2 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        .btn-shop {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .products-section>.title h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+
+        .products-list {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 0 4rem;
+        }
+
+        .product-item {
+            width: 400px;
+            height: 500px;
+            border-radius: 1rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-item .prod-bg {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .product-item .product-img {
+            text-align: center;
+        }
+
+        .product-item .product-img img {
+            width: 400px;
+            height: 400px;
+            object-fit: contain;
+            margin: -4rem auto 0 auto;
+        }
+
+        .prod2 {
+            padding-left: 2rem;
+        }
+
+        .prod3 {
+            transform: rotate(-20deg);
+        }
+
+        .prod4 {
+            width: 300px !important;
+        }
+
+        .prod6 {
+            width: 300px !important;
+        }
+
+        .product-item .product-desc {
+            margin-top: 0.5rem;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .product-item .product-desc .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-item .product-desc .product-price .price {
+            font-weight: 500;
+        }
+
+        .product-item .product-desc .product-price .info {
+            font-size: 1.75rem;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-item .product-desc .product-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-item .product-desc .product-name .name {
+            text-wrap: wrap;
+        }
+
+        .product-item .product-desc .product-name .btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .section-offer {
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .section-offer img {
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            transform: scaleX(-1);
+        }
+        .section-offer .content {
+            width: 25%;
+            margin: 0 auto;
+        }
+        .section-offer .content h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 500;
+        }
+        .section-offer .content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #5D5D5D;
+        }
+        .section-offer .content .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -135,6 +324,143 @@
                     <a href="#">Contact Us</a>
                     <a href="#">Services</a>
                 </div>
+            </div>
+            <div class="head-content">
+                <div class="flex flex-col">
+                    <div class="title1 font-inter color-primary">
+                        Delicious Cafe
+                    </div>
+                    <div class="title2 font-sansita">
+                        Sweet Treats,
+                        <br>
+                        Perfect Eats
+                    </div>
+                </div>
+                <div class="flex font-poppins gap-4">
+                    <div class="btn-shop font-semibold bg-primary">
+                        <a href="#">Shop Now</a>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="#" class="color-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products-section flex flex-col">
+            <div class="title text-center font-sansita">
+                <h1>Top Products</h1>
+            </div>
+            <div class="products-list">
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod1.png" class="prod1" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod2.png" class="prod2" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod3.png" class="prod3" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod4.png" class="prod4" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod5.png" class="prod5" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="./images/prod-bg.png" class="prod-bg" alt="bg">
+                    <div class="product-img">
+                        <img src="./images/prod6.png" class="prod6" alt="product">
+                    </div>
+                    <div class="product-desc font-inter">
+                        <div class="product-price">
+                            <span class="price">40 Baht</span>
+                            <span class="info">i</span>
+                        </div>
+                        <div class="product-name">
+                            <span class="name">Whole Grain Bread</span>
+                            <span class="btn bg-primary">Add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-offer">
+            <img src="./images/offer-bg.png" alt="bg">
+            <div class="content text-center">
+                <h1 class="font-sansita color-secondary">
+                    20% Off Your First Order
+                </h1>
+                <h3 class="font-inter">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem.
+                </h3>
+                <span class="btn font-inter bg-primary color-white">
+                    Learn More
+                </span>
             </div>
         </div>
     </div>
