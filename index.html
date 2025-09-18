@@ -101,11 +101,27 @@
             text-decoration: none;
         }
 
-        .container {
+        .h-sm{
+            height: 40px;
+        }
+        .h-md{
+            height: 60px;
+        }
+        .h-lg{
+            height: 80px;
+        }
+        .h-xl{
+            height: 120px;
+        }
+        .h-2xl{
+            height: 160px;
+        }
+
+        /* .container {
             display: flex;
             flex-direction: column;
             gap: 6rem;
-        }
+        } */
 
         .nav-logo img {
             width: 128px;
@@ -175,6 +191,12 @@
             border-radius: 0.5rem;
         }
 
+        .products-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .products-section>.title h1 {
             font-size: 4rem;
             font-weight: 700;
@@ -182,10 +204,10 @@
         }
 
         .products-list {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             justify-content: center;
             gap: 2rem;
-            flex-wrap: wrap;
             padding: 0 4rem;
         }
 
@@ -356,28 +378,268 @@
             background-color: #933C24;
             transition: background-color 0.3s;
         }
-        .expore-list {
+
+        .expore-section{
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            padding: 0 4rem;
+            flex-direction: column;
+            align-items: center;
         }
+
+        .expore-section>hr{
+            border: 0.5px solid #B9B9B9;
+            margin: 2rem auto;
+            width: 86%;
+        }
+
+        .expore-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            gap: 1.25rem;
+            padding: 0 4rem;
+            max-width: 400px;
+        }
+
         .expore-item {
             width: 400px;
-            height: 300px;
-            border-radius: 1rem;
             position: relative;
             display: flex;
             flex-direction: column;
         }
+
         .expore-item img {
             width: 100%;
             height: 400px;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             object-fit: cover;
+        }
+        .more5{
+            object-position: 0 0;
+        }
+
+        .section-about {
+            position: relative;
+            padding-top: 6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-about img {
             position: absolute;
+            width: 100%;
             z-index: -1;
+        }
+
+        .section-about .content {
+            width: 25%;
+            margin: 0 auto;
+        }
+
+        .section-about .content h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 500;
+            color: white;
+        }
+
+        .section-about .content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #B9B9B9;
+        }
+
+        .section-about .content .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #F5F5F5;
+        }
+
+        .feature-section {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-section>.title h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 0 4rem;
+        }
+
+        .feature-item {
+            position: relative;
+        }
+
+        .feature-item img {
+            width: 350px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .ft1 {
+            object-position: 80% 0;
+        }
+
+        .ft2 {
+            object-position: 0 0;
+        }
+
+        .ft3 {
+            object-position: 90% 0;
+        }
+
+        .feature-item .desc {
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .footer {
+            position: relative;
+        }
+
+        .footer>img {
+            position: absolute;
+            width: 100%;
+            height: 600px;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .footer>.top {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .footer>.top>.logo {
+            width: 250px;
+        }
+
+        .footer>.top>.links {
+            width: 50%;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer>.top>.links a {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #E9BD8D;
+            text-decoration: none;
+        }
+
+        .footer>.top>.links>a:first-child {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #E9BD8D;
+            text-decoration: none;
+        }
+
+        .footer>hr {
+            border: 0.5px solid #E9BD8D;
+            margin: 0 4rem;
+        }
+
+        .footer>.bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 4rem;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer>.bottom>.col1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer>.bottom>.col1>span:first-child {
+            color: #E9BD8D;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        .footer>.bottom>.col1>span:nth-child(2) {
+            font-weight: 600;
+        }
+
+        .footer>.bottom>.col2 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer>.bottom>.col2>span:first-child {
+            color: #E9BD8D;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        .footer>.bottom>.col3 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer>.bottom>.col3>span:first-child {
+            color: #E9BD8D;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        .footer>.bottom>.col3>.item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer>.bottom>.col3>.item>img {
+            width: 6rem;
+        }
+
+        .footer>.bottom>.col3>.item>.desc {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .footer>.bottom>.col3>.item>.desc>.date {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .footer>.bottom>.col3>.item>.desc>.time {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer>.copyright>.bottom {
+            margin-top: 4rem;
+            text-align: center;
+            color: #737373;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -521,6 +783,8 @@
                 </div>
             </div>
         </div>
+        <div class="spacer h-lg">&nbsp;</div>
+        <div class="spacer h-lg">&nbsp;</div>
         <div class="section-offer">
             <img src="./images/offer-bg.png" alt="bg">
             <div class="content text-center">
@@ -535,6 +799,7 @@
                 </span>
             </div>
         </div>
+        <div class="spacer h-2xl">&nbsp;</div>
         <div class="expore-section">
             <div class="title text-center font-sansita">
                 <h1>Explore More</h1>
@@ -565,6 +830,7 @@
                     <div class="">&nbsp;</div>
                 </div>
             </div>
+            <hr>
             <div class="expore-list">
                 <div class="expore-item">
                     <img src="./images/more1.png" class="more1" alt="product">
@@ -583,6 +849,114 @@
                 </div>
                 <div class="expore-item">
                     <img src="./images/more6.png" class="more6" alt="product">
+                </div>
+            </div>
+        </div>
+        <div class="spacer h-2xl">&nbsp;</div>
+        <div class="section-about">
+            <img src="./images/about-bg.png" alt="bg">
+            <div class="content text-center">
+                <h1 class="font-sansita color-secondary">
+                    About us
+                </h1>
+                <h3 class="font-inter">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis
+                    sequi.
+                </h3>
+                <span class="btn font-inter bg-primary color-white">
+                    Read More
+                </span>
+            </div>
+        </div>
+        <div class="spacer h-2xl">&nbsp;</div>
+        <div class="spacer h-lg">&nbsp;</div>
+        <div class="feature-section">
+            <div class="title text-center font-sansita">
+                <h1>Featured Treats</h1>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <img src="./images/ft1.png" class="ft1" alt="image">
+                    <div class="desc font-inter">
+                        <span>Puff Pastry</span>
+                        <span>8 Baht</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <img src="./images/ft2.png" class="ft2" alt="image">
+                    <div class="desc font-inter">
+                        <span>Doughnuts</span>
+                        <span>8 Baht</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <img src="./images/ft3.png" class="ft3" alt="image">
+                    <div class="desc font-inter">
+                        <span>Brownies</span>
+                        <span>8 Baht</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer h-2xl">&nbsp;</div>
+        <div class="footer">
+            <img src="./images/footer-bg.png" alt="bg">
+            <div class="top">
+                <img src="./images/logo.png" class="logo" alt="logo">
+                <div class="links font-inter">
+                    <a href="#">Follow us</a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="bottom font-inter">
+                <div class="col1">
+                    <span>About Us</span>
+                    <span>(02) 807-4500</span>
+                    <span>info@sau.ac.th</span>
+                    <span>19/1 Phetkasem Road</span>
+                    <span>Nongkham Bangkok</span>
+                    <span>10160</span>
+                </div>
+                <div class="col2">
+                    <span>Explore</span>
+                    <span>Home</span>
+                    <span>Blog</span>
+                    <span>Contact us</span>
+                    <span>Services</span>
+                </div>
+                <div class="col3">
+                    <span>Recent News</span>
+                    <span class="item">
+                        <img src="./images/news1.png" alt="news1">
+                        <span class="desc">
+                            <span class="date color-primary">June 14,2025</span>
+                            <span class="name">Puff pastry bliss.</span>
+                        </span>
+                    </span>
+                    <span class="item">
+                        <img src="./images/news2.png" alt="news2">
+                        <span class="desc">
+                            <span class="date color-primary">June 14,2025</span>
+                            <span class="name">Puff pastry bliss.</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="bottom font-inter">
+                    <span>&copy; 2025 Bake House. All rights reserved.</span>
                 </div>
             </div>
         </div>
